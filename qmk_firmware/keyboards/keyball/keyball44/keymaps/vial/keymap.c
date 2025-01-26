@@ -87,3 +87,21 @@ combo_t key_combos[] = {
     [COMBO_ONE] = COMBO(combo_one, KC_ESC),
     [COMBO_TWO] = COMBO(combo_two, KC_ENT),
 };
+
+// タップダンス定義用の関数
+void dance_example_finished(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+        tap_code(KC_A);  // 1回タップで "A"
+    } else if (state->count == 2) {
+        tap_code(KC_B);  // 2回タップで "B"
+    }
+}
+
+// タップダンスのリセット関数（必要に応じて実装）
+void dance_example_reset(qk_tap_dance_state_t *state, void *user_data) {}
+
+// タップダンスアクションの登録
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [0] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_example_finished, dance_example_reset),
+    // 必要に応じて他のタップダンスも追加
+};
