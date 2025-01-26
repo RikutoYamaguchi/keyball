@@ -69,3 +69,21 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+// コンボのキー定義
+enum combo_events {
+    COMBO_ONE,
+    COMBO_TWO,
+    // 必要に応じて追加
+    COMBO_LENGTH
+};
+
+// コンボのトリガーキー
+const uint16_t PROGMEM combo_one[] = {KC_A, KC_B, COMBO_END};
+const uint16_t PROGMEM combo_two[] = {KC_C, KC_D, COMBO_END};
+
+// コンボのアクション定義
+combo_t key_combos[] = {
+    [COMBO_ONE] = COMBO(combo_one, KC_ESC),
+    [COMBO_TWO] = COMBO(combo_two, KC_ENT),
+};
