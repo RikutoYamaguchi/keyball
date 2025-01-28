@@ -20,18 +20,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
-const uint16_t PROGMEM combo1[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_j_k[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_q_w[] = {KC_Q, KC_W, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(combo1, KC_BSPC),
+    COMBO(combo_j_k, KC_BSPC),
+    COMBO(combo_q_w, KC_ESC),
+};
+
+enum {
+    TD_Q_ESC,
+};
+
+tap_dance_action_t tap_dance_actions[] = {
+    [TD_Q_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC),
 };
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default
   [0] = LAYOUT_universal(
-    KC_ESC  , KC_Q     , KC_W     , KC_E      , KC_R      , KC_T     ,                                        KC_Y     , KC_U     , KC_I     , KC_O     , KC_P           , KC_MINS      ,
-    KC_LGUI , KC_A     , KC_S     , LT(2,KC_D), LT(3,KC_F), KC_G     ,                                        KC_H     , KC_J     , KC_K     , KC_L     , LGUI_T(KC_SCLN), LT(3,KC_QUOT),
-    KC_LALT , KC_Z     , KC_X     , KC_C      , KC_V      , KC_B     ,                                        KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH        , KC_EQL      ,
+    KC_ESC  , KC_Q        , KC_W     , KC_E      , KC_R      , KC_T     ,                                        KC_Y     , KC_U     , KC_I     , KC_O     , KC_P           , KC_MINS      ,
+    KC_LGUI , LGUI_T(KC_A), KC_S     , LT(2,KC_D), LT(3,KC_F), KC_G     ,                                        KC_H     , KC_J     , KC_K     , KC_L     , LGUI_T(KC_SCLN), LT(3,KC_QUOT),
+    KC_LALT , LALT_T(KC_Z), KC_X     , KC_C      , KC_V      , KC_B     ,                                        KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH        , KC_EQL      ,
               LSFT(KC_TAB),KC_TAB,                      	KC_LCTL,KC_LSFT,KC_SPC,                  KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 
@@ -43,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [2] = LAYOUT_universal(
-    _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , G(KC_BTN1)  , KC_ESC  , XXXXXXX  , C(S(G(KC_5)))  , XXXXXXX  ,
+    _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , G(KC_BTN1)  , KC_ESC  , XXXXXXX  , C(S(G(KC_4)))  , XXXXXXX  ,
     _______  , XXXXXXX , KC_LALT , XXXXXXX , KC_LGUI , XXXXXXX  ,                                             XXXXXXX , KC_BTN1  , KC_BTN2, XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , XXXXXXX , XXXXXXX   ,XXXXXXX,S(G(KC_5)),XXXXXXX,
                   XXXXXXX     , XXXXXXX  , G(KC_SPC)  ,  _______  , A(KC_SPC)  ,                         _______   , _______  , _______       , _______  , XXXXXXX
