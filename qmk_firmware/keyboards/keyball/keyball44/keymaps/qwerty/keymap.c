@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [2] = LAYOUT_universal(
-    _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , G(KC_BTN1)  , KC_ESC  , XXXXXXX  , C(S(G(KC_5)))  , XXXXXXX  ,
+    _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , G(KC_BTN1)  , KC_ESC  , XXXXXXX  , C(S(G(KC_4)))  , XXXXXXX  ,
     _______  , XXXXXXX , KC_LALT , XXXXXXX , KC_LGUI , XXXXXXX  ,                                             XXXXXXX , KC_BTN1  , KC_BTN2, XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , XXXXXXX , XXXXXXX   ,XXXXXXX,S(G(KC_5)),XXXXXXX,
                   XXXXXXX     , XXXXXXX  , G(KC_SPC)  ,  _______  , A(KC_SPC)  ,                         _______   , _______  , _______       , _______  , XXXXXXX
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______  , SCRL_DVD , CPI_I100 , KC_KB_VOLUME_UP , KC_F15 , KBC_SAVE ,                                   XXXXXXX , XXXXXXX, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , SCRL_DVI , CPI_D100 , KC_KB_VOLUME_DOWN , KC_F14 , XXXXXXX  ,                                 S(G(KC_LBRC)) , G(KC_LBRC)  , G(KC_RBRC), S(G(KC_RBRC))  , XXXXXXX  , XXXXXXX  ,
     _______  , XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                            XXXXXXX , XXXXXXX , XXXXXXX   ,XXXXXXX,XXXXXXX,XXXXXXX,
-                  XXXXXXX     , XXXXXXX  , XXXXXXX ,         XXXXXXX  , XXXXXXX  ,                    _______   , _______  , XXXXXXX       , XXXXXXX  , XXXXXXX
+                  XXXXXXX     , XXXXXXX  , _______ ,         _______  , _______  ,                    _______   , _______  , XXXXXXX       , XXXXXXX  , XXXXXXX
   ),
 };
 // clang-format on
