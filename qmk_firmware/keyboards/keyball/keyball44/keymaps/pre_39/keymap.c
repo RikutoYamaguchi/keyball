@@ -48,28 +48,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______  , KC_Q , KC_W     , KC_E      , KC_R      , KC_T     ,                                        KC_Y     , KC_U     , KC_I     , KC_O     , KC_P           , _______ ,
     _______ , LGUI_T(KC_A), KC_S     , LT(2,KC_D), LT(3,KC_F), KC_G     ,                                        KC_H     , KC_J     , KC_K     , KC_L     , LGUI_T(KC_SCLN), _______,
     _______ , LALT_T(KC_Z), KC_X     , KC_C      , KC_V      , KC_B     ,                                        KC_N     , KC_M     , KC_COMM  , KC_DOT   , LT(3,KC_SLSH)  ,  _______ ,
-              LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                  KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
+              LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                                          KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 
   [1] = LAYOUT_universal(
     _______ ,  KC_1    , KC_2      , KC_3    , KC_4    , KC_5       ,                                         KC_6    , KC_7     , KC_8     , KC_9     , KC_0     , _______ ,
     _______ ,  KC_MINS , S(KC_LBRC), S(KC_9) , S(KC_0) , S(KC_RBRC) ,                                         KC_LEFT , KC_DOWN  , KC_UP    , KC_RIGHT , KC_QUOT  , _______ ,
-    _______ ,  KC_EQL ,  KC_BSLS  , KC_LBRC , KC_RBRC , KC_GRV    ,                                         KC_BSPC   , XXXXXXX  , XXXXXXX  , _______  , S(KC_MINS) , _______ ,
-                  XXXXXXX  , XXXXXXX , XXXXXXX  ,   XXXXXXX  , XXXXXXX  ,                         _______  , _______  , _______       , _______  , _______
+    _______ ,  KC_EQL ,  KC_BSLS  , KC_LBRC , KC_RBRC , KC_GRV    ,                                         KC_BSPC   , XXXXXXX  , XXXXXXX  , _______  , KC_SLSH , _______ ,
+              LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                         _______  , _______  , _______       , _______  , _______
   ),
 
   [2] = LAYOUT_universal(
     _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , G(KC_BTN1)  , KC_ESC  , XXXXXXX  , C(S(G(KC_4)))  , XXXXXXX  ,
     _______  , XXXXXXX , KC_LALT , XXXXXXX , KC_LGUI , XXXXXXX  ,                                             XXXXXXX , KC_BTN1  , KC_BTN2, XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                              XXXXXXX , XXXXXXX , XXXXXXX   ,XXXXXXX,S(G(KC_5)),XXXXXXX,
-                  XXXXXXX     , XXXXXXX  , XXXXXXX  ,  XXXXXXX  , XXXXXXX  ,                         _______   , _______  , _______       , _______  , XXXXXXX
+              LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                         _______   , _______  , _______       , _______  , XXXXXXX
   ),
 
   [3] = LAYOUT_universal(
     _______  , SCRL_DVD , CPI_I100 , KC_KB_VOLUME_UP , KC_F15 , KBC_SAVE ,                                   XXXXXXX , XXXXXXX, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , SCRL_DVI , CPI_D100 , KC_KB_VOLUME_DOWN , KC_F14 , XXXXXXX  ,                                 S(G(KC_LBRC)) , G(KC_LBRC)  , G(KC_RBRC), S(G(KC_RBRC))  , XXXXXXX  , XXXXXXX  ,
     _______  , XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                                            XXXXXXX , XXXXXXX , XXXXXXX   ,XXXXXXX,XXXXXXX,XXXXXXX,
-                  XXXXXXX     , XXXXXXX  , XXXXXXX ,         XXXXXXX  , XXXXXXX  ,                    _______   , _______  , XXXXXXX       , XXXXXXX  , XXXXXXX
+              LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                    _______   , _______  , XXXXXXX       , XXXXXXX  , XXXXXXX
   ),
 };
 // clang-format on
