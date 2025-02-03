@@ -45,7 +45,7 @@ tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default
   [0] = LAYOUT_universal(
-    KC_ESC  , TD(TD_Q_ESC) , KC_W     , KC_E      , KC_R      , KC_T     ,                                        KC_Y     , KC_U     , KC_I     , KC_O     , KC_P           , KC_MINS      ,
+    KC_ESC  , KC_Q , KC_W     , KC_E      , KC_R      , KC_T     ,                                        KC_Y     , KC_U     , KC_I     , KC_O     , KC_P           , KC_MINS      ,
     KC_LGUI , LGUI_T(KC_A), KC_S     , LT(2,KC_D), LT(3,KC_F), KC_G     ,                                        KC_H     , KC_J     , KC_K     , KC_L     , LGUI_T(KC_SCLN), LT(3,KC_QUOT),
     KC_LALT , LALT_T(KC_Z), KC_X     , KC_C      , KC_V      , KC_B     ,                                        KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH        , KC_EQL      ,
               LSFT(KC_TAB),KC_TAB,                      	KC_LCTL,KC_LSFT,KC_SPC,                  KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
