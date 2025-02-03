@@ -20,9 +20,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
-const uint16_t PROGMEM combo1[] = {KC_H, KC_T, COMBO_END};
+/*
+Combo Settings
+*/
+const uint16_t PROGMEM combo_H_T[] = {KC_H, KC_T, COMBO_END};
+const uint16_t PROGMEM combo_QUOT_COMM[] = {KC_QUOT, KC_COMM, COMBO_END};
+
 combo_t key_combos[] = {
-    COMBO(combo1, KC_BSPC),
+  COMBO(combo_H_T, KC_BSPC),
+  COMBO(combo_QUOT_COMM, KC_ESC),
+};
+
+/*
+Tap Dance Settings
+*/
+enum {
+  TD_QUOT_ESC,
+};
+tap_dance_action_t tap_dance_actions[] = {
+  [TD_QUOT_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_ESC),
 };
 
 // clang-format off
@@ -30,8 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default
   [0] = LAYOUT_universal(
     KC_ESC  , KC_QUOT  , KC_COMM  , KC_DOT  , KC_V      , KC_X     ,                                        KC_F     , KC_G     , KC_K  , KC_R   , KC_L          , KC_MINS      ,
-    KC_LGUI , KC_E     , KC_O     , LT(2,KC_A), LT(3,KC_U), KC_I     ,                                      KC_D     , KC_H     , KC_T  , KC_N   , LGUI_T(KC_S), LT(3,KC_QUOT),
-    KC_LALT , KC_SCLN  , KC_Q     , KC_J      , KC_W      , KC_C     ,                                      KC_B     , KC_M     , KC_Y  , KC_P   , KC_Z        , KC_EQL      ,
+    KC_LGUI , LGUI_T(KC_E), KC_O  , LT(2,KC_A), LT(3,KC_U), KC_I     ,                                      KC_D     , KC_H     , KC_T  , KC_N   , LGUI_T(KC_S), LT(3,KC_QUOT),
+    KC_LALT , LALT_T(KC_SCLN), KC_Q, KC_J      , KC_W      , KC_C     ,                                      KC_B     , KC_M     , KC_Y  , KC_P   , KC_Z        , KC_EQL      ,
               LSFT(KC_TAB),KC_TAB,                      	KC_LCTL,KC_LSFT,KC_SPC,                  KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 

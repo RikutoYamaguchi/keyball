@@ -20,19 +20,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
-const uint16_t PROGMEM combo_j_k[] = {KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM combo_q_w[] = {KC_Q, KC_W, COMBO_END};
+/*
+Combo Settings
+*/
+const uint16_t PROGMEM combo_J_K[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_Q_W[] = {KC_Q, KC_W, COMBO_END};
+
 combo_t key_combos[] = {
-    COMBO(combo_j_k, KC_BSPC),
-    COMBO(combo_q_w, KC_ESC),
+  COMBO(combo_J_K, KC_BSPC),
+  COMBO(combo_Q_W, KC_ESC),
 };
 
+/*
+Tap Dance Settings
+*/
 enum {
-    TD_Q_ESC,
+  TD_Q_ESC,
 };
-
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_Q_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC),
+  [TD_Q_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC),
 };
 
 // clang-format off
