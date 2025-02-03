@@ -40,7 +40,7 @@ jobs:
       run: /usr/bin/python3 -m pip install -r __qmk__/requirements.txt
 
     - name: Compile and link
-      run: qmk c2json -o __qmk__/keyboard.json -kb keyball/${{ inputs.keyboard }} -km ${{ inputs.keymap }} __qmk__/keyboards/keyball/${{ inputs.keyboard }}/keymaps/${{ inputs.keymap }}/keymap.c
+      run: qmk c2json -o __qmk__/keyboard.json -kb keyball/${{ inputs.keyboard }} -km ${{ inputs.keymap }} --no-cpp __qmk__/keyboards/keyball/${{ inputs.keyboard }}/keymaps/${{ inputs.keymap }}/keymap.c
 
     - name: Archive built firmware
       uses: actions/upload-artifact@v4
