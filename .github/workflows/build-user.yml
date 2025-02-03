@@ -1,4 +1,4 @@
-name: Build a firmware on demand
+name: Build a qmk on demand
 
 on:
   workflow_dispatch:
@@ -18,13 +18,22 @@ on:
         required: true
         type: string
         default: 'default'
+      type:
+        description: 'Build Type'
+        required: true
+        type: choice
+        default: 'firmware'
+        options:
+        - firmware
+        - keyboard.json
 
 jobs:
 
   build:
 
-    uses: ./.github/workflows/build-firmware.yml
+    uses: ./.github/workflows/run-qmk.yml
     with:
       qmk_version: '0.22.14'
       keyboard:    ${{ inputs.keyboard }}
       keymap:      ${{ inputs.keymap }}
+      type:        ${{ inputs.type }}
