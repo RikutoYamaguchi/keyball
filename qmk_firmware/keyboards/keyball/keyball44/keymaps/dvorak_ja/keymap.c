@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
     _______  , KC_QUOT  , KC_COMM  , KC_DOT  , KC_V      , KC_X     ,                                        KC_F     , KC_G     , KC_K  , KC_R   , KC_L      , _______  ,
     _______ , LGUI_T(KC_E), KC_O  , LT(2,KC_A), LT(3,KC_U), KC_I     ,                                      KC_D     , KC_H     , KC_T  , KC_N   , LGUI_T(KC_S), _______,
-    _______ , LALT_T(KC_SCLN), KC_Q, KC_J      , KC_W      , KC_C     ,                                      KC_B     , KC_M     , KC_Y  , KC_P   , KC_Z        , _______,
+    _______ , LALT_T(KC_SCLN), KC_Q, KC_J      , KC_W      , KC_C     ,                                      KC_B     , KC_M     , KC_Y  , KC_P   , LT(3, KC_Z)        , _______,
               LSFT(KC_TAB),KC_TAB, 	KC_LCTL,KC_LSFT,KC_SPC,                              KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______ ,  KC_1    , KC_2      , KC_3    , KC_4    , KC_5       ,                                         KC_6    , KC_7     , KC_8     , KC_9     , KC_0     , _______ ,
     _______ ,  KC_MINS , S(KC_LBRC), S(KC_9) , S(KC_0) , S(KC_RBRC) ,                                         KC_LEFT , KC_DOWN  , KC_UP    , KC_RIGHT , KC_SCLN  , _______ ,
     _______ ,  KC_EQL ,  KC_BSLS  , KC_LBRC , KC_RBRC , KC_GRV    ,                                         KC_BSPC   , XXXXXXX  , XXXXXXX  , _______  , KC_SLSH  , _______ ,
-                LSFT(KC_TAB),KC_TAB,     	KC_LCTL,KC_LSFT,KC_SPC,                         _______  , _______  , _______       , _______  , _______
+                LSFT(KC_TAB),KC_TAB,     	KC_LNG2,KC_LSFT,KC_LNG1,                         _______  , _______  , _______       , _______  , _______
   ),
 
   [2] = LAYOUT_universal(
