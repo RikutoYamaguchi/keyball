@@ -24,11 +24,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Combo Settings
 */
 const uint16_t PROGMEM combo_H_T[] = {KC_H, KC_T, COMBO_END};
-const uint16_t PROGMEM combo_QUOT_COMM[] = {KC_QUOT, KC_COMM, COMBO_END};
+const uint16_t PROGMEM combo_COMM_DOT[] = {KC_COMM, KC_DOT, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_H_T, KC_BSPC),
-  COMBO(combo_QUOT_COMM, KC_ESC),
+  COMBO(combo_COMM_DOT, KC_ESC),
 };
 
 /*
@@ -45,9 +45,9 @@ tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default
   [0] = LAYOUT_universal(
-    _______  , KC_QUOT  , KC_COMM  , KC_DOT  , KC_V      , KC_X     ,                                        KC_F     , KC_G     , KC_K  , KC_R   , KC_L      , _______  ,
+    _______  , KC_QUOT  , KC_COMM  , KC_DOT  , KC_V      , KC_X     ,                                        KC_F     , KC_G     , KC_K  , KC_R   , LALT_T(KC_L) , _______  ,
     _______ , LGUI_T(KC_E), KC_O  , LT(2,KC_A), LT(3,KC_U), KC_I     ,                                      KC_D     , KC_H     , KC_T  , KC_N   , LGUI_T(KC_S), _______,
-    _______ , LALT_T(KC_SCLN), KC_Q, KC_J      , KC_W      , KC_C     ,                                      KC_B     , KC_M     , KC_Y  , KC_P   , LT(3, KC_Z)        , _______,
+    _______ , KC_SCLN, KC_Q, KC_J      , KC_W      , KC_C     ,                                             KC_B     , KC_M     , KC_Y  , KC_P   , LT(3, KC_Z)        , _______,
               LSFT(KC_TAB),KC_TAB, 	KC_LCTL,KC_LSFT,KC_SPC,                              KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 
