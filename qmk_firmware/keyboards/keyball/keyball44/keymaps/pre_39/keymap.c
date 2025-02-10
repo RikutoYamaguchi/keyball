@@ -25,10 +25,12 @@ Combo Settings
 */
 const uint16_t PROGMEM combo_J_K[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo_W_E[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_I_O[] = {KC_I, KC_O, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_J_K, KC_BSPC),
   COMBO(combo_W_E, KC_ESC),
+  COMBO(combo_I_O, KC_MINS),
 };
 
 /*
