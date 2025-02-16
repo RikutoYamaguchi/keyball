@@ -26,13 +26,13 @@ Combo Settings
 const uint16_t PROGMEM combo_H_T[] = {KC_H, KC_T, COMBO_END};
 const uint16_t PROGMEM combo_COMM_DOT[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM combo_K_R[] = {KC_K, KC_R, COMBO_END};
-const uint16_t PROGMEM combo_O_A[] = {KC_O, KC_A, COMBO_END};
+const uint16_t PROGMEM combo_DOT_V[] = {KC_DOT, KC_V, COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_H_T, KC_BSPC),
   COMBO(combo_COMM_DOT, KC_ESC),
   COMBO(combo_K_R, KC_MINS),
-  COMBO(combo_O_A, KC_TAB),
+  COMBO(combo_DOT_V, KC_TAB),
 };
 
 /*
