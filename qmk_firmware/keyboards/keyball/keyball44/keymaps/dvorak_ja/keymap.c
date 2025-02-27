@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______  , KC_QUOT  , KC_COMM  , KC_DOT  , KC_V      , KC_X     ,                                        KC_F     , KC_G     , KC_K  , KC_R   , LALT_T(KC_L) , _______  ,
     _______ , LGUI_T(KC_E), KC_O  , LT(2,KC_A), LT(3,KC_U), KC_I     ,                                      KC_D     , KC_H     , KC_T  , KC_N   , LGUI_T(KC_S), _______,
     _______ , KC_SCLN, KC_Q, KC_J      , KC_W      , KC_C     ,                                             KC_B     , KC_M     , KC_Y  , KC_P   , LT(3, KC_Z)        , _______,
-              LSFT(KC_TAB),KC_TAB, 	KC_LCTL,LSFT_T(KC_TAB),KC_SPC,                              KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
+              LSFT(KC_TAB),KC_TAB, 	KC_LCTL,SFT_T(KC_TAB),KC_SPC,                              KC_ENT, MO(1), _______,     _______  , C(S(G(KC_4)))
   ),
 
   [1] = LAYOUT_universal(
